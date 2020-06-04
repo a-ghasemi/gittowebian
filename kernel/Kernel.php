@@ -52,6 +52,9 @@ class Kernel
                 case 'Kernel\View':
                     $ret->getContent();
                     break;
+                case 'Kernel\MarkDown':
+                    $ret->getContent();
+                    break;
                 case 'Kernel\Redirect':
                     $ret->go();
                     break;

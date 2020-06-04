@@ -16,7 +16,8 @@
             "App\\": "app"
         },
         "files": [
-            "kernel/helpers/base_helpers.php"
+            "kernel/helpers/base_helpers.php",
+            "kernel/helpers/plus_helpers.php"
         ]
     }
 }
