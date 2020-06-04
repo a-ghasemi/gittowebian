@@ -26,7 +26,7 @@
         <b>Git Repo: </b><a href="{{ env_get('GIT_SRC_REPO') }}">EN.PHP.INFO</a>
     </div>
     <div>
-        <a href="/admin/fetch">Fetch</a>
+        <a href="/admin/clone">Clone Git Repo</a>
     </div>
 </body>
 </html>

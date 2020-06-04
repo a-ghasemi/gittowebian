@@ -58,9 +58,18 @@
 
             .links > a {
                 color: #636b6f;
-                padding: 0 25px;
+                padding: 0 10px;
                 font-size: 13px;
                 font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+
+            .desc > a {
+                color: #636b6f;
+                font-weight: 600;
+                font-size: 20px;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -75,13 +84,13 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    SimPha
+                    GitToWebian
                     <span class="headline m-b-md">v0.9</span>
-                    <div class="desc">Simple MVC framework on PHP7</div>
+                    <div class="desc">Powered by <a href="https://github.com/a-ghasemi/simpha">Simpha</a> (simple mvc framework)</div>
                 </div>
 
                 <div class="links">
-                    Follow at : <a href="https://github.com/a-ghasemi/simpha">Github</a>
+                    Follow at : <a href="https://github.com/a-ghasemi/gittowebian">Github</a>
                 </div>
             </div>
         </div>

@@ -38,6 +38,7 @@ class Kernel
     {
         $controller = "\\App\\Controllers\\" . ucwords($this->url['class']) . 'Controller';
 
+
         if (!class_exists($controller)) {
             header($_SERVER["SERVER_PROTOCOL"] . " 404 Not Found", true, 404);
             return;
