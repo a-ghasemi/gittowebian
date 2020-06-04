@@ -6,17 +6,18 @@ namespace Kernel;
 class MarkDown
 {
     private $file;
+    private $markdown;
     private $content;
 
     public function __construct($file)
     {
         $this->file = $file;
-//        $this->blade = new Blade('../app/views','../storage/views');
+        $this->markdown = file_get_contents($this->file);
     }
 
     public function render(){
-        $this->content = file_get_contents($this->file);
-//        $this->content = $this->blade->render($this->file);
+        $parser = new \Parsedown();
+        $this->content = $parser->parse($this->markdown);
         return $this;
     }
 

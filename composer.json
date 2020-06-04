@@ -8,7 +8,8 @@
     ],
     "require": {
         "jenssegers/blade": "^1.3",
-        "czproject/git-php": "^3.17"
+        "czproject/git-php": "^3.17",
+        "erusev/parsedown": "^1.7"
     },
     "autoload": {
         "psr-4": {
