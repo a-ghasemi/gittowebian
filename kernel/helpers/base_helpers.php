@@ -25,6 +25,11 @@ function storage_dir($dir = '')
     return base_dir('storage') . '/' . $dir;
 }
 
+function repos_dir($dir = '')
+{
+    return storage_dir('repos') . '/' . $dir;
+}
+
 if (!function_exists('dd')) {
     function dd()
     {

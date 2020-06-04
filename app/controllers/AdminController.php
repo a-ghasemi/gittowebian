@@ -16,10 +16,11 @@ class AdminController extends Controller
 
     protected function get_clone()
     {
-        $dest = storage_dir(env_get('GIT_SRC_REPO_NAME'));
-
         try{
-            GitRepository::cloneRepository(env_get('GIT_SRC_REPO'), $dest);
+            GitRepository::cloneRepository(
+                env_get('GIT_SRC_REPO'),
+                repos_dir(env_get('GIT_SRC_REPO_NAME'))
+            );
         }
         catch(GitException $e){
             if(strrpos($e->getMessage(),'Repo already exists') === false){
