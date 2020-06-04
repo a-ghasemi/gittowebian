@@ -23,7 +23,7 @@
 </head>
 <body>
     <div>
-        <b>Git Repo: </b><a href="{{ \Kernel\Kernel::$env['GIT_SRC_REPO'] }}">EN.PHP.INFO</a>
+        <b>Git Repo: </b><a href="{{ env_get('GIT_SRC_REPO') }}">EN.PHP.INFO</a>
     </div>
 </body>
 </html>
