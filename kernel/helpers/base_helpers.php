@@ -2,7 +2,7 @@
 
 function env_get($key, $default = null)
 {
-    return \Kernel\Kernel::$env[$key] ?? $default;
+    return \Kernel\Kernel::$env[$key] ?? \Kernel\Artisan::$env[$key] ?? $default;
 }
 
 function view($blade_path)
@@ -28,11 +28,6 @@ function storage_path($dir = '')
 function kernel_path($dir = '')
 {
     return base_path('kernel') . DIRECTORY_SEPARATOR . $dir;
-}
-
-function repos_dir($dir = '')
-{
-    return storage_dir('repos') . '/' . $dir;
 }
 
 function app_path($dir = '')
