@@ -15,14 +15,19 @@ function redirect($target, $status_code = 200)
     return \Kernel\Redirect::to($target, $status_code);
 }
 
-function base_dir($dir = '')
+function base_path($dir = '')
 {
-    return realpath(__DIR__ . '/../../') . '/' . $dir;
+    return realpath(__DIR__ . implode('..', [DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR, DIRECTORY_SEPARATOR])) . DIRECTORY_SEPARATOR . $dir;
 }
 
-function storage_dir($dir = '')
+function storage_path($dir = '')
 {
-    return base_dir('storage') . '/' . $dir;
+    return base_path('storage') . DIRECTORY_SEPARATOR . $dir;
+}
+
+function kernel_path($dir = '')
+{
+    return base_path('kernel') . DIRECTORY_SEPARATOR . $dir;
 }
 
 function repos_dir($dir = '')
@@ -30,6 +35,17 @@ function repos_dir($dir = '')
     return storage_dir('repos') . '/' . $dir;
 }
 
+function app_path($dir = '')
+{
+    return base_path('app') . DIRECTORY_SEPARATOR . $dir;
+}
+
+if (!function_exists('dump')) {
+    function dump()
+    {
+        foreach (func_get_args() as $arg) var_dump($arg);
+    }
+}
 if (!function_exists('dd')) {
     function dd()
     {
